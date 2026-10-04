@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+    .buttons { margin-bottom: 20px; }
+    button { padding: 10px 15px; margin-right: 10px; cursor: pointer; font-size: 16px; }
+    
+    #loading { font-size: 20px; font-weight: bold; color: #555; }
+    #error { font-size: 20px; font-weight: bold; color: red; background: #ffe6e6; padding: 15px; border-radius: 5px; }
+    
+    .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    
+    .todo-list { list-style: none; padding: 0; }
+    .todo-item { padding: 10px; margin-bottom: 8px; border-radius: 4px; font-weight: bold; color: white; }
+    .completed { background-color: #2ecc71; }
+    .not-completed { background-color: #e74c3c; }
+  </style>
+
+</head>
+<body>
+
+
+    <h1>Работа с API (JSONPlaceholder)</h1>
+  
+  <div class="buttons">
+    <button onclick="getPosts()">1. Посты</button>
+    <button onclick="getComments()">2. Комментарии</button>
+    <button onclick="getTodos()">3. Список дел</button>
+    <button onclick="getPhotos()">Бонус. Фотографии</button>
+    <button onclick="triggerError()">Тест Ошибки (/postss)</button>
+  </div>
+
+  <div id="loading" style="display: none;">Загрузка...</div>
+  <div id="error" style="display: none;">Ошибка загрузки</div>
+
+  <div id="app" class="container"></div>
+
+
+  <script src="main.js"></script>
+    
+
+
+</body>
+</html>
